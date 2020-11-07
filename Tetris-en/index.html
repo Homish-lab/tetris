@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Tetris</title>
+  <link rel='stylesheet' href='css/tetrisstyle.css'/>
+  <link rel="stylesheet" href="css/dark.css" id="theme-link">
+ </head>
+ <body>
+ <div class="wrapper">
+   		 <div class="theme-button" id="theme-button">Change the subject</div>
+		 <header class="header">
+   			 <div class="header__content">
+   				 <h1 align="center">Tetris</h1>			
+</div>
+   		 <main class="style">
+   			 <article class="style__content">
+   			 </article>
+   		 </main>
+</div>
+</body>
+ <body>
+<div id="tetris">
+  <div id="tetrisleft">
+   <canvas id="tetriscanvas" width="300" height="600"></canvas>
+   <button class="playbutton" id="playbutton" onclick="playButtonClicked();">Play</button>
+   <audio id="clearsound" src="sound/pop.ogg" preload="auto"></audio>
+   <audio autoplay loop>
+    <source src="sound/music.ogg" type="audio/ogg; codecs=vorbis" preload="auto">
+    <small>Sorry, the audio tag is not supported by your browser</small>
+   </audio>
+  </div>
+  <div id="tetrisright">
+   <p class="info">&harr;: move left/right;
+   <br>&uarr;: rotate;
+   <br>&darr; falling down;
+   <br>Esc: pause
+   </p>
+   <canvas id="figurecanvas" width="120" height="120"></canvas>
+   <p class="info" id="tetriscount"></p>
+  </div>
+  <div class="clear"></div>
+ </div>
+
+ <script src='js/game.js'></script>
+ <script src='js/controller.js'></script>
+ <script src='js/canvas.js'></script>
+ <script src='themes.js'></script>
+
+ </body>
+</html>
